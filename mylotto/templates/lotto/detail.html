@@ -1,0 +1,24 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/lotto.css'%}">
+    <title></title>
+  </head>
+  <body>
+    <div class="page-header">
+      <h1>My Lotto Page</h1>
+    </div>
+    <div class="Container lotto">
+      <h2>{{lotto.text}}</h2>
+      <p> by {{lotto.name}}</p>
+      <p>{{lotto.update_date}}</p>
+      <p>{{lotto.lottos|linebreaksbr}}</p>
+    </div>
+  </body>
+</html>
+{% endblock content%}
